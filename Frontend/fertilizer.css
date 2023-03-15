@@ -1,0 +1,35 @@
+body {
+  height: 100vh;
+  background-image: url(./fertilizer.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.nodec{
+  
+  border: 1px solid white;
+  backdrop-filter: brightness(60%);
+  backdrop-filter: blur(15px);
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 10%;
+  font-size: 20px;
+  margin: 20px;
+  color:black;
+
+}
+.heading {
+    display: flex;
+    flex-direction: row;
+    border: 3px solid black;
+    align-items: center;
+    column-gap: 1rem;
+    position: sticky;
+    top: 5px;
+    justify-content: start;
+    background-color:rgb(102, 233, 55) ;
+  }
+  .headname {
+    font-size: 2rem;
+    flex-grow: .7;
+    min-width: min-content;
+  }
