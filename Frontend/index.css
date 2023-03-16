@@ -1,6 +1,8 @@
 body{
-    background: linear-gradient(100deg, green,blue);
-    margin: 0;
+  background-image: url(./Frontend/indeximg/back.jpg);
+  margin: 0;
+  background-size: cover;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .heading{
     display: flex;
@@ -77,4 +79,29 @@ body{
 }
 @media (max-width: 1058px){
     
+}
+
+/* contents  */
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(25vw, max-content));
+  grid-template-rows: repeat(3, minmax(250px, max-content));
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  margin: 2rem 8vw 0 8vw;
+  border: 2px solid black;
+  backdrop-filter: blur(10px);
+  row-gap: 1rem;
+  background: radial-gradient(rgba(0, 128, 0, 0.332), rgba(0, 255, 221, 0.086));
+}
+.image {
+  border: 3px double;
+  padding: 1rem;
+  margin: 1rem;
+}
+.info {
+  font-size: 1.25rem;
+  color: white;
 }
