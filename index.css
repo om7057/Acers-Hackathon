@@ -1,5 +1,6 @@
 body{
     background: linear-gradient(100deg, green,blue);
+    margin: 0;
 }
 .heading{
     display: flex;
@@ -46,4 +47,34 @@ body{
 }
 .login a{
     text-decoration: none;
+}
+
+/* above is title code  */
+
+.pagesfull {
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    padding: 3vh;
+    flex-wrap: wrap;
+    row-gap: 2vw;
+}
+.pagenames{
+    scale: 1;
+    color: white;
+    transition: scale .2s ease;
+}
+.pagenames a{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+.pagenames:hover{
+    scale: 1.35;
+}
+.pagenames a:hover{
+    color: orange;
+}
+@media (max-width: 1058px){
+    
 }
