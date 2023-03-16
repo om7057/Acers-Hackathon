@@ -20,7 +20,7 @@ router.get('/',(req,res,next)=>{
             quantity: doc.quantity,
             request: {
                 type: 'GET',
-                url: 'http://localhost:5000/orders' + doc._id
+                url: '/orders' + doc._id
             }}
             })
         })
@@ -57,7 +57,7 @@ router.post('/',(req,res,next)=>{
             quantity: result.quantity},
                 request: {
                     type: 'GET',
-                    url: 'http://localhost:5000/orders' + result._id
+                    url: '/orders' + result._id
                 }
             });
         })
@@ -88,7 +88,7 @@ router.post('/',(req,res,next)=>{
         quantity: result.quantity},
             request: {
                 type: 'GET',
-                url: 'http://localhost:5000/orders' + result._id
+                url: '/orders' + result._id
             }
         });
     })
@@ -113,7 +113,7 @@ router.get('/:orderId',(req,res,next)=>{
     res.status(200).json({
         order: order,
         request: {type: 'GET',
-    url: 'http://localhost:5000/orders'}
+    url: '/orders'}
     });
   })
   .catch(err => {
@@ -129,7 +129,7 @@ router.delete('/:orderId',(req,res,next)=>{
         res.status(200).json({
             message: 'order deleted',
             request: {type: 'POST',
-        url: 'http://localhost:5000/orders',
+        url: '/orders',
     body: {productId: 'ID', 
 quantity: 'Number'}}
         });

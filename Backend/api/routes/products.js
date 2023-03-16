@@ -53,7 +53,7 @@ router.post("/", (req, res, next) => {
             _id: result._id,
             request: {
                 type: 'GET',
-                url: "http://localhost:5000/products/" + result._id
+                url: "/products/" + result._id
             }
         }
       });
@@ -78,7 +78,7 @@ router.get("/:productId", (req, res, next) => {
             product: doc,
             request: {
                 type: 'GET',
-                url: 'http://localhost:5000/products'
+                url: '/products'
             }
         });
       } else {
@@ -104,7 +104,7 @@ router.patch("/:productId", (req, res, next) => {
           message: 'Product updated',
           request: {
               type: 'GET',
-              url: 'http://localhost:5000/products/' + id
+              url: '/products/' + id
           }
       });
     })
@@ -125,7 +125,7 @@ router.delete("/:productId", (req, res, next) => {
           message: 'Product deleted',
           request: {
               type: 'POST',
-              url: 'http://localhost:5000/products',
+              url: '/products',
               body: { name: 'String', price: 'Number' }
           }
       });
