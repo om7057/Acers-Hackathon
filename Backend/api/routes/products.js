@@ -18,7 +18,7 @@ router.get("/", (req, res, next) => {
             _id: doc._id,
             request: {
               type: "GET",
-              url: "http://localhost:5000/products/" + doc._id
+              url: "/products/" + doc._id
             }
           };
         })
@@ -78,7 +78,7 @@ router.get("/:productId", (req, res, next) => {
             product: doc,
             request: {
                 type: 'GET',
-                url: '/products'
+                url: '/products/'
             }
         });
       } else {
@@ -125,7 +125,7 @@ router.delete("/:productId", (req, res, next) => {
           message: 'Product deleted',
           request: {
               type: 'POST',
-              url: '/products',
+              url: '/products/',
               body: { name: 'String', price: 'Number' }
           }
       });
