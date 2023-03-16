@@ -7,7 +7,6 @@ body {
 .heading {
   display: flex;
   width: 100%;
-
   background: linear-gradient(120deg, darkgreen, white);
   justify-content: center;
   align-items: center;
@@ -61,12 +60,14 @@ body {
   flex-wrap: wrap;
   row-gap: 2vw;
 }
-.pagenames, .pagedrop {
+.pagenames,
+.pagedrop {
   scale: 1;
   color: white;
   transition: scale 0.2s ease;
 }
-.pagenames a , .pagedrop a{
+.pagenames a,
+.pagedrop a {
   color: white;
   text-decoration: none;
   cursor: pointer;
@@ -74,14 +75,14 @@ body {
 .pagenames:hover {
   scale: 1.35;
 }
-.pagedrop:hover{
-    scale: 1.35;
+.pagedrop:hover {
+  scale: 1.35;
 }
 .pagenames a:hover {
   color: orange;
 }
-.pagedrop a:hover{
-    color: orange;
+.pagedrop a:hover {
+  color: orange;
 }
 .toggle_btn {
   color: rgb(0, 0, 0);
