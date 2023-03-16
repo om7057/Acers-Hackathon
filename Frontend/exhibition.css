@@ -7,7 +7,6 @@ body {
   .heading {
     display: flex;
     width: 100%;
-  
     background: linear-gradient(120deg, darkgreen, white);
     justify-content: center;
     align-items: center;
