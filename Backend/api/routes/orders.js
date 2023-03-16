@@ -3,11 +3,13 @@ const router =express.Router();
 const mongoose=require('mongoose');
 const { request } = require('../../app');
 const Order=require('../models/order');
+const { populate } = require('../models/product');
 const Product = require('../models/product');
 
 router.get('/',(req,res,next)=>{
     Order.find()
     .select('product quantity _id')
+    .populate('product', 'name')
     .exec()
     .then(docs=>{
         res.status(200).json({
@@ -18,7 +20,7 @@ router.get('/',(req,res,next)=>{
             quantity: doc.quantity,
             request: {
                 type: 'GET',
-                url: 'http://localhost:5000/orders' + doc._id
+                url: '/orders' + doc._id
             }}
             })
         })
@@ -55,7 +57,7 @@ router.post('/',(req,res,next)=>{
             quantity: result.quantity},
                 request: {
                     type: 'GET',
-                    url: 'http://localhost:5000/orders' + result._id
+                    url: '/orders' + result._id
                 }
             });
         })
@@ -86,7 +88,7 @@ router.post('/',(req,res,next)=>{
         quantity: result.quantity},
             request: {
                 type: 'GET',
-                url: 'http://localhost:5000/orders' + result._id
+                url: '/orders' + result._id
             }
         });
     })
@@ -100,6 +102,7 @@ router.post('/',(req,res,next)=>{
 });
 router.get('/:orderId',(req,res,next)=>{
   Order.findById(req.params.orderId)
+  .populate('product')
   .exec()
   .then(order => {
     if(!order){
@@ -110,7 +113,7 @@ router.get('/:orderId',(req,res,next)=>{
     res.status(200).json({
         order: order,
         request: {type: 'GET',
-    url: 'http://localhost:5000/orders'}
+    url: '/orders'}
     });
   })
   .catch(err => {
@@ -126,7 +129,7 @@ router.delete('/:orderId',(req,res,next)=>{
         res.status(200).json({
             message: 'order deleted',
             request: {type: 'POST',
-        url: 'http://localhost:5000/orders',
+        url: '/orders',
     body: {productId: 'ID', 
 quantity: 'Number'}}
         });

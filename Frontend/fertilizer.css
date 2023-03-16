@@ -23,6 +23,7 @@ body{
   flex-grow: 1;
   padding-left: 4vw;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
 }
 .login{
   margin-right: 6vw;
