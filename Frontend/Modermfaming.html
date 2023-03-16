@@ -20,6 +20,8 @@
         <img src="./indeximg/krushilogo.png" alt="logo" height="65px" />
       </div>
       <div class="headline">Krushi Samvardhan</div>
+      <div id="google_translate_element"></div>
+
       <div class="login" id="login"><a href="./login.html">LOGIN</a></div>
     </div>
     <!-- <div> -->
@@ -161,5 +163,15 @@
           : "fa-solid fa-bars";
       };
     </script>
+    
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script>
+        function googleTranslateElementInit(){
+            new google.translate.TranslateElement(
+                {pageLanguage: 'en'},
+                'google_translate_element'
+            )
+       }
+</script>
   </body>
 </html>
