@@ -135,8 +135,6 @@ body {
   color: white;
   max-width: 80vw;
   row-gap: 1rem;
-  /* backdrop-filter: blur(10px); */
-  /* background: linear-gradient(120deg, blue, green); */
 }
 .exhi{
   display: flex;
@@ -179,7 +177,7 @@ ul{
   border: 3px double black;
   padding: 1rem;
 }
-a{
+.exhicontent a{
   text-decoration: none;
   color: lightblue;
 }
