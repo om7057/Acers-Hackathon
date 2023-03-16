@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Krushi Samvardhan</title>
     <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <div class="heading">
@@ -22,14 +29,27 @@
   <div>
     <div class="pagesfull">
       <div class="pagenames name1"><a href="./Frontend/yojanas.html">Yojanas</a></div>
-      <div class="pagenames name2"><a href="">Market Place</a></div>
+      <div class="pagenames name2"><a href="./Frontend/marketplace.html">Market Place</a></div>
       <div class="pagenames name3"><a href="">Modern Farming Technique</a></div>
       <div class="pagenames name4"><a href="">Upcoming Exihibitions</a></div>
       <div class="pagenames name5"><a href="">Agro-Toursim</a></div>
       <div class="pagenames name6"><a href="./Frontend/fertilizer.html">Fertilizers and Pesticides</a></div>
       <div class="pagenames name7"><a href="">Weather Alerts</a></div>
+      <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
     </div>
     
+     <div class="dropdown_menu">
+      <div class="pagedrop name1"><a href="./Frontend/yojanas.html">Yojanas</a></div>
+      <div class="pagedrop name2"><a href="./Frontend/marketplace.html">Market Place</a></div>
+      <div class="pagedrop name3"><a href="">Modern Farming Technique</a></div>
+      <div class="pagedrop name4"><a href="">Upcoming Exihibitions</a></div>
+      <div class="pagedrop name5"><a href="">Agro-Toursim</a></div>
+      <div class="pagedrop name6"><a href="./Frontend/fertilizer.html">Fertilizers and Pesticides</a></div>
+      <div class="pagedrop name7"><a href="">Weather Alerts</a></div>
+     </div>
+
     <div class="content">
         <div class="image img1">
           <img src="./Frontend/indeximg/form.png" alt="form" />
@@ -52,5 +72,20 @@
         </div>
       </div>
     </div>
+
+    <script>
+      const toggleBtn = document.querySelector(".toggle_btn");
+      const toggleBtnIcon = document.querySelector(".toggle_btn i");
+      const dropDownMenu = document.querySelector(".dropdown_menu");
+
+      toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle("open");
+        const isOpen = dropDownMenu.classList.contains("open");
+
+        toggleBtnIcon.classList = isOpen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      };
+    </script>
   </body>
 </html>
