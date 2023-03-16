@@ -147,3 +147,12 @@ body {
     rgba(0, 255, 221, 0.086)
   );
 }
+.line{
+    border-bottom: 3px solid rgb(0, 0, 0);
+    width: 80vw;
+    padding: 0.01rem 0 0 0;
+}
+.texttitle{
+    font-size: 2rem;
+    color: rgb(45, 255, 17);
+}
