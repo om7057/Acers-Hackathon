@@ -1,6 +1,5 @@
 body{
     background: linear-gradient(100deg, green,blue);
-    text-align: center;
 }
 .heading{
     display: flex;
