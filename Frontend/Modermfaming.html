@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Farming</title>
+    <link rel="stylesheet" href="./Modernfarming.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+</head>
+<body>
+    <div class="heading">
+        <div class="logo">
+          <img src="./indeximg/krushilogo.png" alt="logo" height="65px" />
+        </div>
+        <div class="headline">Krushi Samvardhan</div>
+        <div class="login" id="login"><a href="./login.html">LOGIN</a></div>
+      </div>
+      <!-- <div> -->
+        <div class="pagesfull">
+          <div class="pagenames name1"><a href="./yojanas.html">Yojanas</a></div>
+          <div class="pagenames name2">
+            <a href="./marketplace.html">Market Place</a>
+          </div>
+          <div class="pagenames name3">
+            <a href="">Modern Farming Technique</a>
+          </div>
+          <div class="pagenames name4"><a href="">Upcoming Exihibitions</a></div>
+          <div class="pagenames name5"><a href="">Agro-Toursim</a></div>
+          <div class="pagenames name6">
+            <a href="./fertilizer.html">Fertilizers and Pesticides</a>
+          </div>
+          <div class="pagenames name7"><a href="">Weather Alerts</a></div>
+          <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+  
+        <div class="dropdown_menu">
+          <div class="pagedrop name1"><a href="./yojanas.html">Yojanas</a></div>
+          <div class="pagedrop name2"><a href="">Market Place</a></div>
+          <div class="pagedrop name3">
+            <a href="">Modern Farming Technique</a>
+          </div>
+          <div class="pagedrop name4"><a href="">Upcoming Exihibitions</a></div>
+          <div class="pagedrop name5"><a href="">Agro-Toursim</a></div>
+          <div class="pagedrop name6">
+            <a href="./fertilizer.html">Fertilizers and Pesticides</a>
+          </div>
+          <div class="pagedrop name7"><a href="">Weather Alerts</a></div>
+        </div>
+
+        <div class="modernfarm">
+            <div class="container">
+                <div class="image img1">img</div>
+                <div class="info text1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate similique esse architecto obcaecati. Quaerat sapiente vitae, id saepe incidunt consequatur, at, exercitationem alias deleniti eveniet eos. Doloremque dolores quidem iusto. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente illum earum deserunt officia nemo commodi. Ad accusantium vitae sint tenetur incidunt, explicabo distinctio itaque minus? Autem obcaecati quod perspiciatis reiciendis?</div>
+                <div class="image img2">img</div>
+                <div class="info text2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga eveniet animi cupiditate odio in quidem voluptatum aut, esse modi iusto ut qui dolorem facere amet sint maiores repellendus assumenda alias? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic pariatur architecto eveniet error repudiandae neque ut eum natus blanditiis, veritatis facilis. Reprehenderit optio id rem dolore eligendi reiciendis numquam atque.</div>
+                <div class="image img3">img</div>
+                <div class="info text3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur molestiae eum repudiandae itaque explicabo fugit odit non at voluptatem adipisci, perspiciatis ullam amet autem nisi, nulla porro dignissimos ipsa dicta! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates illo reprehenderit quas temporibus, a dolor amet quasi commodi nam dolorem. Sunt saepe dolorum sed reiciendis. Aperiam facere voluptatum cum quis?</div>
+            </div>
+        </div>
+
+
+
+    <script>
+        const toggleBtn = document.querySelector(".toggle_btn");
+        const toggleBtnIcon = document.querySelector(".toggle_btn i");
+        const dropDownMenu = document.querySelector(".dropdown_menu");
+  
+        toggleBtn.onclick = function () {
+          dropDownMenu.classList.toggle("open");
+          const isOpen = dropDownMenu.classList.contains("open");
+  
+          toggleBtnIcon.classList = isOpen
+            ? "fa-solid fa-xmark"
+            : "fa-solid fa-bars";
+        };
+      </script>
+</body>
+</html>

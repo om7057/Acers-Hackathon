@@ -124,34 +124,26 @@ body {
   justify-content: center;
   align-items: center;
 }
-
-/* market place  */
-
-.marketcontent {
+.modernfarm {
   display: flex;
   justify-content: center;
-  align-items: center;
+  min-height: 200px;
+  max-height: min-content;
 }
-
 .container {
   display: inline-flex;
-  border: 0.00001px solid white;
+  font-size: 1.5rem;
+  border: 0.01px double white;
   flex-direction: column;
-  justify-items: center;
+  justify-content: center;
   align-items: center;
+  max-width: 65vw;
   color: white;
-  font-size: 1rem;
-  padding: 1rem 9vw 2rem 9vw;
+  padding: 2rem 9vw 2rem 9vw;
   backdrop-filter: blur(10px);
   row-gap: 1rem;
   background: radial-gradient(
     rgba(217, 244, 217, 0.332),
     rgba(0, 255, 221, 0.086)
   );
-}
-.image img {
-  max-height: 400px;
-}
-.info {
-  font-size: 1.5rem;
 }
