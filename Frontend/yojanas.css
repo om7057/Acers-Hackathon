@@ -48,3 +48,23 @@ body{
   .login a{
     text-decoration: none;
   }
+  .item4 {
+    box-shadow:  10px 5px 5px rgb(167, 228, 242);
+    font-size: larger;
+    border: 0.1rem solid;
+    padding: 0.5rem;
+    color:white;
+    background-color: rgba(6, 6, 6, 0.1);
+    
+  }
+  ol{
+    color: white;
+  }
+  li{
+    font-size: larger;
+    font-weight:bolder;
+  }
+  .bolder{
+    font-size: larger;
+    font-weight:bolder;
+  }
