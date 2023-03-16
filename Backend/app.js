@@ -9,6 +9,7 @@ const orderRoutes=require('./api/routes/orders');
 
 mongoose.connect('mongodb+srv://om7057:'+ process.env.MONGO_ATLAS_PW +'@krushisamwardhan.i9du1e5.mongodb.net/?retryWrites=true&w=majority')
 
+mongoose.Promise = global.Promise;
 
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({extended:false}));
@@ -19,7 +20,7 @@ app.use((req,res,next)=>{
     res.header('Access-Control-Allow-Headers','Origin,X-Requested-with,Content-TypeError,Accept,Authorization');
     if(req.method==='OPTIONS'){
         res.header('Access-Control-Allow-Methods','PUT,POST,GET,DELETE,PATCH');
-        res.status(200).json({});
+        return res.status(200).json({});
     }
     next();
 });

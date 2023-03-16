@@ -68,9 +68,8 @@ body{
     }
     .txt input:focus ~ span::label ,
     .txt input:valid ~ span::label{
-      top: -5px;
-      color: #2691d9;
-       
+        top: -5px;
+        color: #2691d9;
     }
 
     .txt input:focus ~ span::before ,
