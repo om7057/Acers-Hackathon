@@ -82,9 +82,7 @@ router.get("/:productId", (req, res, next) => {
             }
         });
       } else {
-        res
-          .status(404)
-          .json({ message: "No valid entry found for provided ID" });
+        res.status(404).json({ message: "No valid entry found for provided ID" });
       }
     })
     .catch(err => {
